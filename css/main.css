@@ -1819,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b8ff7c;
+  background: #7c1a75;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2460,7 +2460,7 @@ embed {
   display: inline-block;
 }
 body {
-  background: url("../../custom/bg.png") no-repeat;
+  background: url("../../custom/bg.jpg") no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -2474,6 +2474,8 @@ body {
   color: #000;
 }
 .brand .site-title {
-  font-size: 32px;
-  line-height: 42px;
+  padding-top: 12px;
+  font-size: 24px;
+  line-height: 46px;
+  font-family: 'Lobster Two', 'Roboto Slab', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
