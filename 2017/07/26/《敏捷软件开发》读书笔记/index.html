@@ -100,28 +100,28 @@
 
 
   
-  <meta name="keywords" content="配置," />
+  <meta name="keywords" content="笔记," />
 
 
-<meta name="description" content="aria2 is a lightweight multi-protocol &amp;amp; multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.">
-<meta name="keywords" content="配置">
+<meta name="description" content="从事代码工作两年后，从盲目码字到设计先行的思路启蒙">
+<meta name="keywords" content="笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="aria2配置">
-<meta property="og:url" content="http://yoursite.com/2018/02/17/aria2配置/index.html">
+<meta property="og:title" content="《敏捷软件开发》读书笔记">
+<meta property="og:url" content="http://yoursite.com/2017/07/26/《敏捷软件开发》读书笔记/index.html">
 <meta property="og:site_name" content="lefreet&#39;s">
-<meta property="og:description" content="aria2 is a lightweight multi-protocol &amp;amp; multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.">
+<meta property="og:description" content="从事代码工作两年后，从盲目码字到设计先行的思路启蒙">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-26T15:23:33.000Z">
+<meta property="og:updated_time" content="2018-02-26T15:43:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="aria2配置">
-<meta name="twitter:description" content="aria2 is a lightweight multi-protocol &amp;amp; multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.">
+<meta name="twitter:title" content="《敏捷软件开发》读书笔记">
+<meta name="twitter:description" content="从事代码工作两年后，从盲目码字到设计先行的思路启蒙">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/17/aria2配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/26/《敏捷软件开发》读书笔记/"/>
 
 
 
@@ -130,7 +130,7 @@
     sidebar: "",
   };
 </script>
-  <title>aria2配置 | lefreet's</title>
+  <title>《敏捷软件开发》读书笔记 | lefreet's</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/17/aria2配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/26/《敏捷软件开发》读书笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lefreet">
@@ -282,7 +282,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">aria2配置</h2>
+          <h2 class="post-title" itemprop="name headline">《敏捷软件开发》读书笔记</h2>
         
 
         <div class="post-meta">
@@ -294,7 +294,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-17T23:39:07+08:00">2018-02-17</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-26T23:27:38+08:00">2017-07-26</time>
             
 
             
@@ -332,20 +332,73 @@
 
       
         <blockquote>
-<p>aria2 is a lightweight multi-protocol &amp; multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.</p>
+<p>从事代码工作两年后，从盲目码字到设计先行的思路启蒙</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="传送门"><a href="#传送门" class="headerlink" title="传送门"></a>传送门</h3><ul>
-<li><a href="https://github.com/aria2/aria2" target="_blank" rel="noopener">aria2</a></li>
-<li><a href="https://github.com/binux/yaaw" target="_blank" rel="noopener">YAAW</a></li>
-<li><a href="https://github.com/acgotaku/BaiduExporter" target="_blank" rel="noopener">BaiduExporter</a></li>
-<li><a href="https://blog.icehoney.me/posts/2015-01-31-Aria2-download" target="_blank" rel="noopener">说明</a></li>
-<li><a href="https://pan.baidu.com/s/1mjFf8xU" target="_blank" rel="noopener">网盘</a> 密码:7oe3</li>
+<h3 id="一、功能设计原则"><a href="#一、功能设计原则" class="headerlink" title="一、功能设计原则"></a>一、功能设计原则</h3><hr>
+<h4 id="1-SRP：单一职责原则"><a href="#1-SRP：单一职责原则" class="headerlink" title="1. SRP：单一职责原则"></a>1. SRP：单一职责原则</h4><blockquote>
+<p>一个类应该只有一个发生变化的原因。</p>
+</blockquote>
+<h4 id="2-OCP：开放-封闭原则"><a href="#2-OCP：开放-封闭原则" class="headerlink" title="2. OCP：开放 - 封闭原则"></a>2. OCP：开放 - 封闭原则</h4><blockquote>
+<p>软件实体（类、模块、函数）应该是可以扩展，但是不可修改。 </p>
+</blockquote>
+<ul>
+<li>对于扩展是开放的，需求改变时，可以对模块进行扩展。可以改变模块的功能。</li>
+<li>对于修改时封闭的，扩展时，不需要修改模块内部的代码</li>
+<li>其核心是通过抽象，抽取基本通用的部分（基类），再通过派生，实现功能的扩展（extend）</li>
 </ul>
-<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install aria2</span><br></pre></td></tr></table></figure>
-<h4 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./aria2c.conf是配置文件相对于当前命令所在位置</span></span><br><span class="line"><span class="comment"># -D 让服务常驻，启动完即可关闭终端</span></span><br><span class="line">aria2c --conf-path=./aria2c.conf -D</span><br></pre></td></tr></table></figure>
-<h4 id="用YAAW管理下载"><a href="#用YAAW管理下载" class="headerlink" title="用YAAW管理下载"></a>用YAAW管理下载</h4><p>chrome商店搜索YAAW，安装。YAAW扩展程序按钮点开，页面右上角小扳手配置aria2本地服务端口<code>http://localhost:6800/jsonrpc</code>。</p>
-<h4 id="用BaiduExporter直接从百度网盘下载"><a href="#用BaiduExporter直接从百度网盘下载" class="headerlink" title="用BaiduExporter直接从百度网盘下载"></a>用BaiduExporter直接从百度网盘下载</h4><p>插件暂时只能手动安装。下载<code>BaiduExporter.crx</code>，打开chrome扩展工具界面，拖进去。网页上打开百度网盘页面，工具栏多出一个<em>导出下载</em>按钮可供操作。</p>
+<h4 id="3-LSP：Liskov替换原则"><a href="#3-LSP：Liskov替换原则" class="headerlink" title="3. LSP：Liskov替换原则"></a>3. LSP：Liskov替换原则</h4><blockquote>
+<p>子类型（subtype）必须能够替换掉它们的基类型（base type）。<br>若对类型S的每一个对象o1，都存在一个类型T的对象o2，使得在所有针对T编写的程序P中，用o1替换o2后，程序P的行为功能不变，则S是T的子类型 –Barbara Liskov</p>
+</blockquote>
+<ul>
+<li>S应该是基于T派生而来的，反过来说，由T派生出去的S应该满足上述条件，否则认为程序是脆弱的。</li>
+</ul>
+<h4 id="4-DIP：依赖倒置原则"><a href="#4-DIP：依赖倒置原则" class="headerlink" title="4. DIP：依赖倒置原则"></a>4. DIP：依赖倒置原则</h4><blockquote>
+<p>a. 高层模块不应该依赖于低层模块。二者都应该依赖于抽象。<br>b. 抽象不应该依赖于细节。细节应该依赖于抽象。</p>
+</blockquote>
+<ul>
+<li>低层（通用）模块提供抽象，由高层（业务）模块去调用。</li>
+<li>业务操作抽象接口</li>
+</ul>
+<h4 id="5-ISP：接口隔离原则"><a href="#5-ISP：接口隔离原则" class="headerlink" title="5. ISP：接口隔离原则"></a>5. ISP：接口隔离原则</h4><blockquote>
+<p>不应该强迫客户程序依赖并未使用的方法。</p>
+</blockquote>
+<h3 id="二、包和组件"><a href="#二、包和组件" class="headerlink" title="二、包和组件"></a>二、包和组件</h3><hr>
+<h4 id="内聚性原则：粒度"><a href="#内聚性原则：粒度" class="headerlink" title="内聚性原则：粒度"></a>内聚性原则：粒度</h4><h5 id="1-REP-Reuse-Release-Equivalence-：重用-发布等价原则"><a href="#1-REP-Reuse-Release-Equivalence-：重用-发布等价原则" class="headerlink" title="1. REP(Reuse-Release Equivalence)：重用-发布等价原则"></a>1. REP(Reuse-Release Equivalence)：重用-发布等价原则</h5><blockquote>
+<p>a. 重用的粒度就是发布的粒度<br>b. 可重用的组件必然包含可重用的类</p>
+</blockquote>
+<ul>
+<li>为了复用而设计的组件应该自始至终都是为了能够持续重用而进行开发、扩展，版本的迭代能够向下兼容</li>
+<li>设计之初应该做好约定</li>
+</ul>
+<h5 id="2-CRP-Common-Reuse-：共同重用原则"><a href="#2-CRP-Common-Reuse-：共同重用原则" class="headerlink" title="2. CRP(Common-Reuse)：共同重用原则"></a>2. CRP(Common-Reuse)：共同重用原则</h5><blockquote>
+<p>a. 一个组件中的所有类应该是共同重用的。如果重用了组件中的一个类，那么就要重用组件中的所有类。</p>
+</blockquote>
+<ul>
+<li>组件内的依赖，必需是都满足REP的，确保组件是共同可重用</li>
+</ul>
+<h5 id="3-CCP-Common-Closure-：共同重用原则"><a href="#3-CCP-Common-Closure-：共同重用原则" class="headerlink" title="3. CCP(Common-Closure)：共同重用原则"></a>3. CCP(Common-Closure)：共同重用原则</h5><blockquote>
+<p>a. 组件中的所有类对于同一种性质的变化应该是共同封闭的。一个变化若对于一个封闭的组件产生影响，则将对该组件中的所有类产生影响，而对其他组件则不造成影响。</p>
+</blockquote>
+<ul>
+<li>类似SRP，一个组件不应该包含多个引起变化的原因</li>
+<li>组件中的类要做到高内聚，低耦合，尽量将变化封闭，而不引起其它类的变化。</li>
+</ul>
+<h4 id="耦合性原则：稳定性"><a href="#耦合性原则：稳定性" class="headerlink" title="耦合性原则：稳定性"></a>耦合性原则：稳定性</h4><h5 id="1-ADP-Acyclic-Dependencies-：无环依赖原则"><a href="#1-ADP-Acyclic-Dependencies-：无环依赖原则" class="headerlink" title="1. ADP(Acyclic-Dependencies)：无环依赖原则"></a>1. ADP(Acyclic-Dependencies)：无环依赖原则</h5><blockquote>
+<p>在组件的依赖关系图中不允许存在环</p>
+</blockquote>
+<h5 id="2-SIP-Stable-Dependencies-：稳定依赖原则"><a href="#2-SIP-Stable-Dependencies-：稳定依赖原则" class="headerlink" title="2. SIP(Stable-Dependencies)：稳定依赖原则"></a>2. SIP(Stable-Dependencies)：稳定依赖原则</h5><blockquote>
+<p>朝着稳定的方向进行依赖</p>
+</blockquote>
+<ul>
+<li>开发时，尽量减少非必要的依赖</li>
+</ul>
+<h5 id="3-SAP-Stable-Abstractions-：抽象稳定原则"><a href="#3-SAP-Stable-Abstractions-：抽象稳定原则" class="headerlink" title="3. SAP(Stable-Abstractions)：抽象稳定原则"></a>3. SAP(Stable-Abstractions)：抽象稳定原则</h5><blockquote>
+<p>组件的抽象程度应该与其稳定程度一致</p>
+</blockquote>
+<ul>
+<li>用抽象来提高组件的稳定性</li>
+</ul>
 
       
     </div>
@@ -366,7 +419,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/配置/" rel="tag"># 配置</a>
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
           
         </div>
       
@@ -379,18 +432,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/13/《数据结构与算法JavaScript描述》读书笔记——数组/" rel="next" title="《数据结构与算法JavaScript描述》读书笔记——数组">
-                <i class="fa fa-chevron-left"></i> 《数据结构与算法JavaScript描述》读书笔记——数组
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/25/用verdaccio搭建私有npm包管理平台/" rel="prev" title="用verdaccio搭建私有npm包管理平台">
-                用verdaccio搭建私有npm包管理平台 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/13/《数据结构与算法JavaScript描述》读书笔记——数组/" rel="prev" title="《数据结构与算法JavaScript描述》读书笔记——数组">
+                《数据结构与算法JavaScript描述》读书笔记——数组 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -526,7 +575,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#传送门"><span class="nav-text">传送门</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#过程"><span class="nav-text">过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载"><span class="nav-text">下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动服务"><span class="nav-text">启动服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用YAAW管理下载"><span class="nav-text">用YAAW管理下载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用BaiduExporter直接从百度网盘下载"><span class="nav-text">用BaiduExporter直接从百度网盘下载</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、功能设计原则"><span class="nav-text">一、功能设计原则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-SRP：单一职责原则"><span class="nav-text">1. SRP：单一职责原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-OCP：开放-封闭原则"><span class="nav-text">2. OCP：开放 - 封闭原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-LSP：Liskov替换原则"><span class="nav-text">3. LSP：Liskov替换原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-DIP：依赖倒置原则"><span class="nav-text">4. DIP：依赖倒置原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-ISP：接口隔离原则"><span class="nav-text">5. ISP：接口隔离原则</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、包和组件"><span class="nav-text">二、包和组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内聚性原则：粒度"><span class="nav-text">内聚性原则：粒度</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-REP-Reuse-Release-Equivalence-：重用-发布等价原则"><span class="nav-text">1. REP(Reuse-Release Equivalence)：重用-发布等价原则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-CRP-Common-Reuse-：共同重用原则"><span class="nav-text">2. CRP(Common-Reuse)：共同重用原则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-CCP-Common-Closure-：共同重用原则"><span class="nav-text">3. CCP(Common-Closure)：共同重用原则</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#耦合性原则：稳定性"><span class="nav-text">耦合性原则：稳定性</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-ADP-Acyclic-Dependencies-：无环依赖原则"><span class="nav-text">1. ADP(Acyclic-Dependencies)：无环依赖原则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-SIP-Stable-Dependencies-：稳定依赖原则"><span class="nav-text">2. SIP(Stable-Dependencies)：稳定依赖原则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-SAP-Stable-Abstractions-：抽象稳定原则"><span class="nav-text">3. SAP(Stable-Abstractions)：抽象稳定原则</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
