@@ -338,8 +338,8 @@
 <li><a href="https://blog.icehoney.me/posts/2015-01-31-Aria2-download" target="_blank" rel="noopener">说明</a></li>
 <li><a href="https://pan.baidu.com/s/1mjFf8xU" target="_blank" rel="noopener">网盘</a> 密码:7oe3</li>
 </ul>
-<h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><h5 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install aria2</span><br></pre></td></tr></table></figure>
-<h5 id="2-启动服务"><a href="#2-启动服务" class="headerlink" title="2. 启动服务"></a>2. 启动服务</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ./aria2c.conf是配置文件相对于当前命令所在位置</span></span><br><span class="line"><span class="comment"># -D 让服务常驻，启动完即可关闭终端</span></span><br><span class="line">aria2c --conf-path=./aria2c.conf -D</span><br></pre></td></tr></table></figure>
+<h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><h5 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install aria2</span><br></pre></td></tr></table></figure>
+<h5 id="2-启动服务"><a href="#2-启动服务" class="headerlink" title="2. 启动服务"></a>2. 启动服务</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ./aria2c.conf是配置文件相对于当前命令所在位置</span></span><br><span class="line"><span class="comment"># -D 让服务常驻，启动完即可关闭终端</span></span><br><span class="line">aria2c --conf-path=./aria2c.conf -D</span><br></pre></td></tr></table></figure>
 <h5 id="3-用YAAW管理下载"><a href="#3-用YAAW管理下载" class="headerlink" title="3. 用YAAW管理下载"></a>3. 用YAAW管理下载</h5><p>chrome商店搜索YAAW，安装。YAAW扩展程序按钮点开，页面右上角小扳手配置aria2本地服务端口<code>http://localhost:6800/jsonrpc</code>。</p>
 <h5 id="4-用BaiduExporter直接从百度网盘下载"><a href="#4-用BaiduExporter直接从百度网盘下载" class="headerlink" title="4. 用BaiduExporter直接从百度网盘下载"></a>4. 用BaiduExporter直接从百度网盘下载</h5><p>插件暂时只能手动安装。下载<code>BaiduExporter.crx</code>，打开chrome扩展工具界面，拖进去。网页上打开百度网盘页面，工具栏多出一个<em>导出下载</em>按钮可供操作。</p>
 
@@ -395,7 +395,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/17/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/17/用verdaccio搭建私有npm包管理平台/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lefreet">
@@ -414,7 +414,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/17/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2018/02/17/用verdaccio搭建私有npm包管理平台/" itemprop="url">用verdaccio搭建私有npm包管理平台</a></h1>
         
 
         <div class="post-meta">
@@ -426,7 +426,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-17T22:50:07+08:00">2018-02-17</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-17T23:39:07+08:00">2018-02-17</time>
             
 
             
@@ -465,15 +465,36 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>之前给公司内部搭建了个私有包管理平台，把搭建过程记录下来</p>
+<p><a href="https://github.com/verdaccio/verdaccio" target="_blank" rel="noopener">verdaccio</a>是一个私有的<a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a>包管理平台，它的前身是<a href="https://github.com/rlidwka/sinopia" target="_blank" rel="noopener">sinopia</a>，目前sinopia已经停止维护，见<a href="https://github.com/rlidwka/sinopia/issues/376" target="_blank" rel="noopener">#376</a>。</p>
+<p>verdaccio在npm官方包管理功能的基础上，提供了私有包管理、包源镜像、重写公共包等功能扩展，支持多种平台和环境进行部署。</p>
+<blockquote>
+<p>npm本身是提供<a href="https://docs.npmjs.com/getting-started/scoped-packages" target="_blank" rel="noopener">作用域包</a>的特性，但是私有包的功能收费的，对于公司而言，自己搭建平台比较实惠。</p>
+</blockquote>
+<h3 id="平台搭建-windows-server-2012"><a href="#平台搭建-windows-server-2012" class="headerlink" title="平台搭建(windows server 2012)"></a>平台搭建(windows server 2012)</h3><ul>
+<li><a href="https://github.com/verdaccio/verdaccio/blob/master/docs/windows.md" target="_blank" rel="noopener">参考文档</a></li>
+</ul>
+<ol>
+<li>在部署路径创建个目录，如<code>d:\demo</code>，进入该目录，执行<code>npm install verdaccio</code>安装。</li>
+<li><p>同目录下创建配置文件<code>config.yaml</code>，默认配置从<a href="https://github.com/verdaccio/verdaccio/blob/master/conf/default.yaml" target="_blank" rel="noopener">这里</a>拷贝一份。主要修改几个地方：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 设置上游源</span></span><br><span class="line"><span class="attr">uplinks:</span> </span><br><span class="line"><span class="attr">  npmjs:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="attr">https://registry.npmjs.org</span></span><br><span class="line"><span class="attr">  taobao:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="attr">https://registry.npm.taobao.org</span></span><br><span class="line"><span class="comment"># 设置上游源顺序以及匹配条件</span></span><br><span class="line"><span class="attr">packages:</span></span><br><span class="line">  <span class="string">...:</span></span><br><span class="line"><span class="attr">    proxy:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">taobao</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">npm</span></span><br><span class="line"><span class="comment"># 设置外网监听端口，否则无法外网访问</span></span><br><span class="line"><span class="attr">listen:</span> <span class="attr">http://0.0.0.0:10001</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载<a href="https://www.nssm.cc/download/" target="_blank" rel="noopener">NSSM</a>到该目录，作用是让verdaccio作为常驻后台服务。命令行窗口打开转到该目录，执行<code>nssm install</code>回车，弹出对话框对应输入：</p>
+<ul>
+<li>Path: <code>node</code></li>
+<li>Startup directory: <code>d:\demo</code></li>
+<li>Arguments: <code>d:\demo\node_modules\verdaccio\src\lib\cli.js -c d:\demo\config.yaml</code></li>
+<li>Server name: <code>my-verdaccio</code></li>
+</ul>
+</li>
+<li><p>接上，执行<code>nssm start my-verdaccio</code>，服务就跑起来了</p>
+</li>
+<li>试着外网访问<code>ip+host</code>，注意防火墙问题。出别的问题自己看<a href="https://github.com/verdaccio/verdaccio/tree/master/docs" target="_blank" rel="noopener">官方文档</a>，我也是乱写的。</li>
+<li>官方默认用户密码加密方式<a href="https://github.com/verdaccio/verdaccio/blob/master/src/plugins/htpasswd/crypt3.js" target="_blank" rel="noopener">参考</a><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">crypt3(<span class="string">'123456'</span>) <span class="comment">// --&gt;$65I6KH/.1F1w</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="包源管理"><a href="#包源管理" class="headerlink" title="包源管理"></a>包源管理</h3><p>推荐用<a href="https://github.com/Pana/nrm" target="_blank" rel="noopener">nrm</a>管理npm包源，当然，手动操作也是可以的，<a href="https://docs.npmjs.com/misc/config#registry" target="_blank" rel="noopener">参考</a>。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装nrm</span></span><br><span class="line">npm i nrm -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看可用包源</span></span><br><span class="line">nrm ls</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加verdaccio包源，别名strong(按个人习惯定义)</span></span><br><span class="line">nrm add strong http://yourweb:yourhost/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到verdaccio包源，切换一次，终身有效</span></span><br><span class="line">nrm use strong</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注册一个用户，然后愉快的开始npm操作</span></span><br><span class="line">npm adduser</span><br></pre></td></tr></table></figure>
 
           
         
