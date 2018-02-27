@@ -100,23 +100,28 @@
 
 
   
-  <meta name="keywords" content="Lefreet, Frontend, Vue" />
+  <meta name="keywords" content="指南," />
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="lefreet&#39;s">
-<meta property="og:url" content="http://yoursite.com/tags/配置/index.html">
+<meta name="description" content="最近琢磨开发geojson-help命令行工具，把开发工具的过程整理了下">
+<meta name="keywords" content="指南">
+<meta property="og:type" content="article">
+<meta property="og:title" content="npm命令行工具开发">
+<meta property="og:url" content="http://yoursite.com/2017/09/11/npm命令行工具开发/index.html">
 <meta property="og:site_name" content="lefreet&#39;s">
+<meta property="og:description" content="最近琢磨开发geojson-help命令行工具，把开发工具的过程整理了下">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-27T03:16:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lefreet&#39;s">
+<meta name="twitter:title" content="npm命令行工具开发">
+<meta name="twitter:description" content="最近琢磨开发geojson-help命令行工具，把开发工具的过程整理了下">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/11/npm命令行工具开发/"/>
 
 
 
@@ -125,7 +130,7 @@
     sidebar: "",
   };
 </script>
-  <title>Tag: 配置 | lefreet's</title>
+  <title>npm命令行工具开发 | lefreet's</title>
   
 
 
@@ -172,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,86 +249,194 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>配置<small>Tag</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/11/npm命令行工具开发/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lefreet">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/25679627?s=460&v=4">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="lefreet's">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/02/25/用verdaccio搭建私有npm包管理平台/" itemprop="url">
-              
-                <span itemprop="name">用verdaccio搭建私有npm包管理平台</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">npm命令行工具开发</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-25T18:32:53+08:00"
-              content="2018-02-25" >
-          02-25
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-11T10:21:11+08:00">2017-09-11</time>
+            
 
-    </header>
-  </article>
+            
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/17/aria2配置/" itemprop="url">
-              
-                <span itemprop="name">aria2配置</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-17T23:39:07+08:00"
-              content="2018-02-17" >
-          02-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <blockquote>
+<p>最近琢磨开发<a href="https://github.com/lefreet/geojson-help" target="_blank" rel="noopener">geojson-help</a>命令行工具，把开发工具的过程整理了下</p>
+</blockquote>
+<a id="more"></a>
+<ul>
+<li><p>初始化</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir project</span><br><span class="line">npm init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新建<code>bin/run</code>命令文件，内容如下，代表在node环境执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env node</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改下可执行权限</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ sudo chmod u+x run</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改package.json文件，注册npm命令</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"bin": &#123;</span><br><span class="line">  "run": "./bin/run"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>软链接命令到全局环境，方便调试</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm link</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>然后在run文件中写命令行代码，可以用<a href="https://github.com/tj/commander.js" target="_blank" rel="noopener">commander</a>来执行git风格的命令</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> run = <span class="built_in">require</span>(<span class="string">'../package.json'</span>);</span><br><span class="line"><span class="keyword">var</span> commander = <span class="built_in">require</span>(<span class="string">'commander'</span>);</span><br><span class="line"></span><br><span class="line">commander</span><br><span class="line">  .version(run.version)</span><br><span class="line">  .usage(<span class="string">'&lt;command&gt; [options]'</span>)</span><br><span class="line">  .command(<span class="string">'init'</span>, <span class="string">'initialize'</span>)</span><br><span class="line">  .parse(process.argv)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同样新建<code>bin/run-init</code>, 执行<code>run init</code> 时即可将命令分发到<code>run-init</code>文件内</p>
+</li>
+<li><p>在<code>run-init</code>中写一些要在node环境中执行的代码，可以通过<code>commander</code>来抓取参数</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> commander = <span class="built_in">require</span>(<span class="string">'commander'</span>);</span><br><span class="line"></span><br><span class="line">commander</span><br><span class="line">  .option(<span class="string">'-p, --params &lt;params&gt;'</span>, <span class="string">'some params'</span>)</span><br><span class="line">  .parse(process.argv);</span><br><span class="line">  </span><br><span class="line"><span class="built_in">console</span>.log(params.params);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行<code>run init -p test</code>， 控制台应该会输出<code>test</code></p>
+</li>
+<li>将npm包发布后， <code>npm i your-package -g</code>安装到全局，即可直接调用命令</li>
+</ul>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/指南/" rel="tag"># 指南</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/13/《数据结构与算法JavaScript描述》读书笔记——数组/" rel="next" title="《数据结构与算法JavaScript描述》读书笔记——数组">
+                <i class="fa fa-chevron-left"></i> 《数据结构与算法JavaScript描述》读书笔记——数组
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/17/aria2配置/" rel="prev" title="aria2配置">
+                aria2配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -364,7 +477,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -540,6 +653,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.4"></script>
+
+
 
   
 
