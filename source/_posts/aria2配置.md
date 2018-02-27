@@ -1,7 +1,7 @@
 ---
 title: aria2配置
 date: 2018-02-17 23:39:07
-tags: 配置
+tags: 指南
 ---
 
 > aria2 is a lightweight multi-protocol & multi-source, cross platform download utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink.
