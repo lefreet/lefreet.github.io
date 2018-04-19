@@ -100,28 +100,31 @@
 
 
   
-  <meta name="keywords" content="指南," />
+  <meta name="keywords" content="Lefreet, Frontend, Vue" />
 
 
-<meta name="description" content="之前给公司内部搭建了个私有包管理平台，记录下过程">
-<meta name="keywords" content="指南">
+<meta name="description" content="增加服务器压力，减少带宽，极大压缩资源请求时间">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用verdaccio搭建私有npm包管理平台">
-<meta property="og:url" content="http://yoursite.com/2018/02/25/用verdaccio搭建私有npm包管理平台/index.html">
+<meta property="og:title" content="iis动态压缩设置">
+<meta property="og:url" content="http://yoursite.com/2017/04/19/iis动态压缩设置/index.html">
 <meta property="og:site_name" content="lefreet&#39;s">
-<meta property="og:description" content="之前给公司内部搭建了个私有包管理平台，记录下过程">
+<meta property="og:description" content="增加服务器压力，减少带宽，极大压缩资源请求时间">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-27T03:00:37.000Z">
+<meta property="og:image" content="http://yoursite.com/2017/04/19/iis动态压缩设置/install.png">
+<meta property="og:image" content="http://yoursite.com/2017/04/19/iis动态压缩设置/restart.png">
+<meta property="og:image" content="http://yoursite.com/2017/04/19/iis动态压缩设置/result.png">
+<meta property="og:updated_time" content="2018-04-19T06:59:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用verdaccio搭建私有npm包管理平台">
-<meta name="twitter:description" content="之前给公司内部搭建了个私有包管理平台，记录下过程">
+<meta name="twitter:title" content="iis动态压缩设置">
+<meta name="twitter:description" content="增加服务器压力，减少带宽，极大压缩资源请求时间">
+<meta name="twitter:image" content="http://yoursite.com/2017/04/19/iis动态压缩设置/install.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/25/用verdaccio搭建私有npm包管理平台/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/19/iis动态压缩设置/"/>
 
 
 
@@ -130,7 +133,7 @@
     sidebar: "",
   };
 </script>
-  <title>用verdaccio搭建私有npm包管理平台 | lefreet's</title>
+  <title>iis动态压缩设置 | lefreet's</title>
   
 
 
@@ -265,7 +268,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/25/用verdaccio搭建私有npm包管理平台/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/19/iis动态压缩设置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lefreet">
@@ -282,7 +285,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">用verdaccio搭建私有npm包管理平台</h2>
+          <h2 class="post-title" itemprop="name headline">iis动态压缩设置</h2>
         
 
         <div class="post-meta">
@@ -294,7 +297,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-25T18:32:53+08:00">2018-02-25</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-19T14:07:12+08:00">2017-04-19</time>
             
 
             
@@ -332,38 +335,17 @@
 
       
         <blockquote>
-<p>之前给公司内部搭建了个私有包管理平台，记录下过程</p>
+<p>增加服务器压力，减少带宽，极大压缩资源请求时间</p>
 </blockquote>
 <a id="more"></a>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p><a href="https://github.com/verdaccio/verdaccio" target="_blank" rel="noopener">verdaccio</a>是一个私有的<a href="https://www.npmjs.com/" target="_blank" rel="noopener">npm</a>包管理平台，它的前身是<a href="https://github.com/rlidwka/sinopia" target="_blank" rel="noopener">sinopia</a>，目前sinopia已经停止维护，见<a href="https://github.com/rlidwka/sinopia/issues/376" target="_blank" rel="noopener">#376</a>。</p>
-<p>verdaccio在npm官方包管理功能的基础上，提供了私有包管理、包源镜像、重写公共包等功能扩展，支持多种平台和环境进行部署。</p>
-<blockquote>
-<p>npm本身是提供<a href="https://docs.npmjs.com/getting-started/scoped-packages" target="_blank" rel="noopener">作用域包</a>的特性，但是私有包的功能收费的，对于公司而言，自己搭建平台比较实惠。</p>
-</blockquote>
-<h3 id="平台搭建-windows-server-2012"><a href="#平台搭建-windows-server-2012" class="headerlink" title="平台搭建(windows server 2012)"></a>平台搭建(windows server 2012)</h3><ul>
-<li><a href="https://github.com/verdaccio/verdaccio/blob/master/docs/windows.md" target="_blank" rel="noopener">参考文档</a></li>
-</ul>
-<ol>
-<li>在部署路径创建个目录，如<code>d:\demo</code>，进入该目录，执行<code>npm install verdaccio</code>安装。</li>
-<li><p>同目录下创建配置文件<code>config.yaml</code>，默认配置从<a href="https://github.com/verdaccio/verdaccio/blob/master/conf/default.yaml" target="_blank" rel="noopener">这里</a>拷贝一份。主要修改几个地方：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 设置上游源</span></span><br><span class="line"><span class="attr">uplinks:</span> </span><br><span class="line"><span class="attr">  npmjs:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="attr">https://registry.npmjs.org</span></span><br><span class="line"><span class="attr">  taobao:</span></span><br><span class="line"><span class="attr">    url:</span> <span class="attr">https://registry.npm.taobao.org</span></span><br><span class="line"><span class="comment"># 设置上游源顺序以及匹配条件</span></span><br><span class="line"><span class="attr">packages:</span></span><br><span class="line">  <span class="string">...:</span></span><br><span class="line"><span class="attr">    proxy:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">taobao</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">npm</span></span><br><span class="line"><span class="comment"># 设置外网监听端口，否则无法外网访问</span></span><br><span class="line"><span class="attr">listen:</span> <span class="attr">http://0.0.0.0:10001</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>下载<a href="https://www.nssm.cc/download/" target="_blank" rel="noopener">NSSM</a>到该目录，作用是让verdaccio作为常驻后台服务。命令行窗口打开转到该目录，执行<code>nssm install</code>回车，弹出对话框对应输入：</p>
-<ul>
-<li>Path: <code>node</code></li>
-<li>Startup directory: <code>d:\demo</code></li>
-<li>Arguments: <code>d:\demo\node_modules\verdaccio\src\lib\cli.js -c d:\demo\config.yaml</code></li>
-<li>Server name: <code>my-verdaccio</code></li>
-</ul>
-</li>
-<li><p>接上，执行<code>nssm start my-verdaccio</code>，服务就跑起来了</p>
-</li>
-<li>试着外网访问<code>ip+host</code>，注意防火墙问题。出别的问题自己看<a href="https://github.com/verdaccio/verdaccio/tree/master/docs" target="_blank" rel="noopener">官方文档</a>，我也是乱写的。</li>
-<li>官方默认用户密码加密方式<a href="https://github.com/verdaccio/verdaccio/blob/master/src/plugins/htpasswd/crypt3.js" target="_blank" rel="noopener">参考</a><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">crypt3(<span class="string">'123456'</span>) <span class="comment">// --&gt;$65I6KH/.1F1w</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="包源管理"><a href="#包源管理" class="headerlink" title="包源管理"></a>包源管理</h3><p>推荐用<a href="https://github.com/Pana/nrm" target="_blank" rel="noopener">nrm</a>管理npm包源，当然，手动操作也是可以的，<a href="https://docs.npmjs.com/misc/config#registry" target="_blank" rel="noopener">参考</a>。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装nrm</span></span><br><span class="line">npm i nrm -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看可用包源</span></span><br><span class="line">nrm ls</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加verdaccio包源，别名strong(按个人习惯定义)</span></span><br><span class="line">nrm add strong http://yourweb:yourhost/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到verdaccio包源，切换一次，终身有效</span></span><br><span class="line">nrm use strong</span><br><span class="line"></span><br><span class="line"><span class="comment"># 注册一个用户，然后愉快的开始npm操作</span></span><br><span class="line">npm adduser</span><br></pre></td></tr></table></figure>
+<h4 id="1-安装动态压缩服务"><a href="#1-安装动态压缩服务" class="headerlink" title="1.安装动态压缩服务"></a>1.安装动态压缩服务</h4><p>打开<code>服务器管理器</code>-&gt;<code>角色</code>-&gt;<code>Web服务器(IIS)</code>，右侧找到<code>添加角色服务</code>，在打开的窗口中找到<code>性能</code>，勾选<code>动态压缩</code>，然后安装。</p>
+<p><img src="install.png" alt="安装服务"></p>
+<h4 id="2-配置压缩目标"><a href="#2-配置压缩目标" class="headerlink" title="2.配置压缩目标"></a>2.配置压缩目标</h4><p>打开<code>C:\Windows\System32\inetsrv\config\applicationHost.config</code>，找到<code>dynamicTypes</code>节点，添加需要的<code>mime</code>类型，常见的<code>json</code>和<code>javascript</code>如下：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">add</span> <span class="attr">mimeType</span>=<span class="string">"application/json"</span> <span class="attr">enabled</span>=<span class="string">"true"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">add</span> <span class="attr">mimeType</span>=<span class="string">"application/javascript"</span> <span class="attr">enabled</span>=<span class="string">"true"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-添加动态压缩对文件的操作权限"><a href="#3-添加动态压缩对文件的操作权限" class="headerlink" title="3.添加动态压缩对文件的操作权限"></a>3.添加动态压缩对文件的操作权限</h4><p>打开iis，找到对应站点，右键<code>编辑权限</code>-&gt;<code>添加</code>-&gt;<code>高级</code>，找到<code>IUSER</code>、<code>IIS_IUSERS</code>、<code>NETWORK_SERVICE</code>权限添加。然后打开站点的<code>功能视图</code>找到<code>压缩</code>，将<code>启动动态内容压缩</code>勾选，然后保存。</p>
+<h4 id="4-重启检查"><a href="#4-重启检查" class="headerlink" title="4.重启检查"></a>4.重启检查</h4><p>点击左侧树根节点，再右侧点击重启（注意不是重启站点），目的是使<code>applicationHost.config</code>刷新。 检查接口的<code>Response Headers</code>，看是非有<code>Content-Encoding:gzip</code>，有的话表示成功。</p>
+<p><img src="restart.png" alt="重启"></p>
+<p><img src="result.png" alt="结果"></p>
 
       
     </div>
@@ -382,12 +364,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/指南/" rel="tag"># 指南</a>
-          
-        </div>
-      
 
       
       
@@ -397,15 +373,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/17/aria2配置/" rel="next" title="aria2配置">
-                <i class="fa fa-chevron-left"></i> aria2配置
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/26/《敏捷软件开发》读书笔记/" rel="prev" title="《敏捷软件开发》读书笔记">
+                《敏捷软件开发》读书笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -540,7 +516,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平台搭建-windows-server-2012"><span class="nav-text">平台搭建(windows server 2012)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包源管理"><span class="nav-text">包源管理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-安装动态压缩服务"><span class="nav-text">1.安装动态压缩服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-配置压缩目标"><span class="nav-text">2.配置压缩目标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-添加动态压缩对文件的操作权限"><span class="nav-text">3.添加动态压缩对文件的操作权限</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-重启检查"><span class="nav-text">4.重启检查</span></a></li></ol></div>
             
 
           </div>
